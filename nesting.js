@@ -85,7 +85,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
-
+function removeDuplicates() {
+  for(let upperBounds = workplaceAccidents.length - 1; upperBounds >= 0; upperBounds--) {
+    for(let searchIndex = upperBounds - 1; searchIndex >= 0; searchIndex--) {
+      if(workplaceAccidents[upperBounds] === workplaceAccidents[searchIndex]) {
+        workplaceAccidents.splice(upperBounds,1)
+      }
+    }
+  }
+  return workplaceAccidents;
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -112,8 +121,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
