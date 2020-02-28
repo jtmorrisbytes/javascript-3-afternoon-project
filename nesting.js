@@ -163,7 +163,7 @@ var myCar = {
 */
 
 //Code Here
-
+function recordCleaner(){return myCar.accidents.forEach(accident => accident.atFaultForAccident = false);}
 
 
 ////////// PROBLEM 5 //////////
@@ -182,5 +182,23 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
+function replaceOddEven(num) {
+  if(num % 2 === 0) {
+    return 'even'
+  }
+  else {
+    return 'odd'
+  }
+}
+function looper(){
+  return [...numsArr]
+  .map((element,index,array) =>{
+      if(element.__proto__.constructor === [].__proto__.constructor) {
+        return element.map(replaceOddEven)
+      }
+      else {
+        return replaceOddEven(element)
+      }
+      
+  })
+}
