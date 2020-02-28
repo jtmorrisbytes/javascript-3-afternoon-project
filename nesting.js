@@ -49,7 +49,22 @@ var employees = [
     2. If the employee's first name is Lorie, change her department to 'HR'.
     3. Return the updated employee array.
 */
-
+const employeeUpdater = function() {
+  for(let employeeNum = employees.length - 1; employeeNum>=0; employeeNum --) {
+    let employee = employees[employeeNum];
+    if(employee.firstName ==='Theo') {
+       employees.splice(employeeNum,1)
+      employee = null;
+      continue;
+    }
+    else if(employee.firstName === "Lorie") {
+      employee.department = 'HR'
+    }
+   
+  }
+  return employees;
+  
+}
 //Code Here
 
 
